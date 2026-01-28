@@ -34,13 +34,7 @@ add_library(game-module MODULE ${GAME_SRC})
 string(TIMESTAMP BUILD_TIME "%Y%m%d_%H%M%S")
 set_target_properties(game-module PROPERTIES
         PDB_NAME "game_module_${BUILD_TIME}")
-target_compile_definitions(game-module PRIVATE
-        _CRT_SECURE_NO_WARNINGS
-        debugRecordArray=debugRecordsGame
-        SKL_GAME_MODULE)
 target_link_libraries(game-module PRIVATE
-        SHARED_DEPENDENCIES
-        Jolt
         "$<LINK_LIBRARY:WHOLE_ARCHIVE,engine>")
 target_include_directories(game-module PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/include)
