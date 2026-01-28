@@ -2,7 +2,6 @@
 position = [-1.0, 0.0, 0.0]
 [camera.CameraComponent]
 farPlane = 100.0
-[camera.FlyingMovement]
 
 [cube.Transform3D]
 position = [5.0, 0.0, 0.0]
